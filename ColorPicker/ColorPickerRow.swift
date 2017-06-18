@@ -33,12 +33,7 @@ public final class ColorPickerCell : Cell<UIColor>, CellType, UICollectionViewDe
         }
     }
 
-    public var palettes : [ColorPalette] = [iOS().palette,
-                                            Solarised().palette,
-                                            WP8().palette,
-                                            Flat().palette,
-                                            Material().palette,
-                                            Metro().palette] {
+    public var palettes = ColorPalette.defaultColorPalettes {
         didSet {
             colorsView.reloadData()
         }
